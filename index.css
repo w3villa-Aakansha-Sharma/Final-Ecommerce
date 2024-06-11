@@ -11,12 +11,18 @@ body {
   
   i {
     margin: 3px;
-    padding: 0;
+    padding-right:3px ;
     display: inline;
   }
   
   .wrapper {
     max-width: 1280px;
+    margin: auto;
+    
+  
+  }
+  .wrappers {
+    width: 1280px;
     margin: auto;
   
   }
@@ -62,14 +68,28 @@ body {
     padding: 0;
     margin: 0;
   }
-  
+  .header{
+    height:40px;
+   
+  }
+  header{
+    background-color:white;
+  }
   .menubar {
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
   
   }
-  
+ 
+  .menubar ul li:hover{
+    background-color: rgb(235, 239, 241);
+    
+    
+  }
+  .menubar ul li{
+    padding:4px;
+  }
   .dropdownmenu {
     display: none;
   }
@@ -108,8 +128,8 @@ body {
   .subsearch input {
     font-size: 15px;
     border: 1px solid rgba(0, 0, 0, 0.5);
-    width: 265px;
-    height: auto;
+    width: 400px;
+    height:35px;
     
   }
   
@@ -129,8 +149,8 @@ body {
   .options {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    zoom: 1.12;
+    gap: 5px;
+    
   
   }
   .options i{
@@ -166,11 +186,12 @@ body {
     padding: 4px;
     margin: 4px;
     background-color: rgba(0, 0, 255, 0.850);
+    font-size: 30px;
   
   }
   
   .cart a {
-    font-size: 16px;
+    font-size: 19px;
     vertical-align: top;
   }
   
@@ -226,27 +247,7 @@ body {
 
 
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  
-  color:black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
@@ -368,7 +369,7 @@ body {
 .Allservices{
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
+   justify-content: space-between;
 }
 .servicelist{
     display: flex;
@@ -379,7 +380,7 @@ body {
     margin-bottom: 14px;
 }
 .serviceicon i{
-    border: 2px solid rgb(20, 20, 119);
+    border: 3px solid rgb(2, 32, 163);
     border-radius: 50%;
     padding: 16px;
      font-size: 38px;
@@ -416,7 +417,7 @@ body {
     text-align: center;
     font-size: 16px;
     padding: 16px;
-    color:rgb(192 192 192)
+    color:rgb(122, 117, 117)
   }
   
   .categories p a {
@@ -501,8 +502,16 @@ body {
     border-radius: 10px;
     width: 55%;
     font-size: 1rem;
-  
+    font-weight: bolder;
+    display:none;
+   
   }
+.cardimg-tag:hover .cardlink{
+    display:block;
+    transition-delay:3s;
+   
+  }
+
   
   .cardlink a {
     align-self: center;
@@ -524,21 +533,29 @@ body {
     position: relative;
     margin: 6.5px;
     flex-direction: column;
-    border: 2px solid rgb(220, 220, 220);
+    border: 1px solid rgb(220, 220, 220);
   }
   
   .pimage {
-    object-fit:contain;
+    object-fit:cover;
     height: 280px;
-    width: 95%;
-    padding: 20px;
+    width:230px;
+    padding: 0 auto;
+  
+  }
+  .pimages{
+    object-fit:cover;
+    height: 280px;
+    width:100%;
+    padding: 0 auto;
   
   }
   
   .pname {
     display: flex;
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(223, 225, 230);
     justify-content: space-between;
+    color:black;
   
   }
   
@@ -570,7 +587,10 @@ body {
   
   .pbrand {
     text-decoration: underline;
+    font-weight: bolder;
+    
   }
+  
   
   
   .price h3 {
@@ -652,6 +672,10 @@ body {
     border: 2px solid rgb(220, 220, 220);
     border-radius: 8px;
     
+      -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%);
+    
+    
   
   }
   .brandname img{
@@ -660,8 +684,8 @@ body {
   }
   
   .dell{
-    -webkit-filter: grayscale(100%); 
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(0%); 
+    filter: grayscale(0%);
   
   }
   
@@ -708,7 +732,9 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-  
+  .wraps{
+    display:none;
+  }
   .views {
     display: flex;
     background-color: aliceblue;
@@ -1066,6 +1092,7 @@ body {
     width: 100%;
     height:150px;
     object-fit: contain;
+    filter:grayscale(0%);
   }
   
   /* 14 section */
@@ -1088,7 +1115,7 @@ body {
   }
   .footer-items li {
     display: block;
-    color: rgb(32, 32, 218)
+    color: rgb(68 106 131);
   }
   .footer-items hr {
     border-color: rgba(255, 0, 0, 0.692);
@@ -1222,11 +1249,16 @@ body {
     color:black;
     font-weight:bolder;
   }
+  .cartItem1{
+    background-color: rgb(238, 233, 233);
+    padding-right: 20px;
+    padding-left: 10px;
+  }
   
   
   
   
-  @media screen and (max-width:1060px) {
+  @media screen and (max-width:768px) {
     body {
       font-family: "Open Sans", sans-serif;
       padding: 0px;
@@ -1237,31 +1269,66 @@ body {
       max-width: 1024px;
   
     }
+    .wrapper .main-container .left-div {
+      display:none;
+
+    }
+    .wrapper .main-container .main-right-div{
+      display:none;
+
+    }
+    .wrapper .wraps{
+      margin:0;
+      padding: 0;
+    }
+    
   
     .menubar {
       display: none;
   
       
     }
-    .main-container{
+   
+    .wraps{
         display:block;
         background-image: url("images/phone5.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         opacity:0.9;
+        height:calc(100vh - 390px);
+        min-height:400px;
+        min-width:100%;
+        margin: 0;
+        padding: 0;
+    }
+    .wrapper .main-container .left-div{
+      border:none;
+    }
+    .wrapper .main-container{
+      display:none;
+      height:0;
     }
   
     .dropdownmenu {
       padding: 15.5px;
       display: block;
-      background-color: rgb(238, 236, 236);
+      background-color:white;
       
     }
-  
+  .wrapps{
+    display:none;
+  }
     .options {
       display: none;
     }
-  
+    .latestcardsimg {
+      border-radius: 16px;
+      position: relative;
+      align-self: center;
+      object-fit: cover;
+      height:300px;
+      width: 97%;
+    }
   
     .search {
       display: none;
@@ -1322,10 +1389,12 @@ body {
     #navbar-drop {
       display: block;
       margin: 15.5px;
+      margin-top: 8px;
     }
   
     #navbar-drop i {
       color: white;
+      margin-top: 24px;
     
     }
   
@@ -1363,9 +1432,10 @@ body {
     .text-wrap{
       height:300px;
       width:80%;
-      margin:20px auto;
+     margin:auto;
       text-align: center;
-      padding: 40px 0;
+      padding-top: 45px;
+      
     }
   
     .highlight {
@@ -1390,8 +1460,12 @@ body {
   .main-wrap{
     display:none;
   }
-  
-   
+  .wrapper .main-container .right-div .top-right-div{
+    display:none;
+  }
+  .wrapper .main-container .right-div .bottom-right-div{
+    display:none;
+  }
     
   
     .features {
@@ -1457,6 +1531,7 @@ body {
   
     .most-viewed-items-container {
       flex-wrap: wrap;
+      justify-content: left;
   
     }
   
@@ -1533,3 +1608,217 @@ body {
       display:none;
     }
   }
+  .pimgcontainer1:after{
+    content: "-70%";
+    width: 44px;
+    height: 25px;
+    display: inline-block;
+    background-color: red;
+    position: absolute;
+   top:45px;
+   right:10px;
+   bottom:0;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bolder;
+    color:white;
+    padding-top: 10px;
+   
+  }
+@media screen and (max-width:1340px){
+ .wrapper{
+
+    max-width:1000px;
+    margin:auto;
+  }
+  .wrapper .search{
+    display:none;
+  }
+  .wrapps .wrapper .main-container{
+    height:400px;
+  }
+  .wrapps .wrapper .main-container .left-div .slideshow-container{
+  height:405px;
+
+  }
+  .wrapps .wrapper .main-container .left-div .slideshow-container .mySlides .text-cont{
+    padding-top:90px;
+    font-size: 13px;
+
+  }
+  .wrapps .wrapper .main-container .main-right-div .right-div .top-right-div .top-right-image .right-text-content{
+    padding-top:30px;
+    font-size: 10px;
+    line-height:25px;
+
+  }
+  .wrapps .wrapper .main-container .main-right-div .right-div .bottom-right-div .bottom-right-image .right-text-content{
+    padding-top: 30px;
+    font-size: 10px;
+    line-height: 25px;
+
+  }
+
+}
+@media screen and (max-width:1022px){
+  .wrapper{
+ 
+     max-width:850px;
+     margin:auto;
+   }
+   .wrapper .search{
+     display:none;
+   }
+   
+ 
+   .wrapper .navbaroptions .navoptions .navoptions-list li  #fullwidth{
+    display:none;
+   }
+   .wrapper .navbaroptions .navoptions .navoptions-list li  #megamenu {
+    display:none;
+   }
+   .wrapper .navbaroptions .navoptions .navoptions-list li  #multilevel {
+    display:none;
+   }
+   
+ }
+ @media screen and (max-width:910px){
+  .wrapper{
+ 
+     max-width:700px;
+     margin:auto;
+   }
+   .wrapper .search{
+     display:none;
+   }
+   .wrapper .languages{
+    display:none;
+
+   }
+   .wrapper .options{
+    display:none;
+   }
+   .wrapps .wrapper .main-container .left-div .slideshow-container .mySlides  .text-cont{
+    padding-top: 30px;
+   }
+ 
+   .wrapper .navbaroptions .navoptions .navoptions-list li  #fullwidth{
+    display:none;
+   }
+   .wrapper .navbaroptions .navoptions .navoptions-list li  #megamenu {
+    display:none;
+   }
+   .wrapper .navbaroptions .navoptions .navoptions-list li  #multilevel {
+    display:none;
+   }
+   .wrapps .wrapper .main-container .main-right-div .right-div .top-right-div  .top-right-image .right-text-content{
+    padding-top: 30px;
+    font-size: 8px;
+   }
+   .wrapps .wrapper .main-container .main-right-div .right-div .bottom-right-div  .bottom-right-image .right-text-content{
+    padding-top: 30px;
+    font-size: 8px;
+   }
+   
+ }
+ .slideshow-container {
+  max-width: 100%;
+  height:650px;
+  
+ 
+  
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color:black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.text-cont{
+  text-align: left;padding: 60px;max-width: 500px;
+  padding-top: 180px;
+  
+}
+.right-text-content{
+  text-align: left;padding: 20px;line-height: 44px; padding-left: 15px;padding-top: 40px;
+}
+.main-container{
+  width:100%;display:flex;padding:10px 0;gap:10px;margin:0 auto;height:650px;
+}
+.brandname img{
+  filter:grayscale(0%);
+}
