@@ -220,7 +220,7 @@ body {
   }
   
   .navoptions {
-    margin-right: 10px;
+  
     list-style-type: none;
   
   }
@@ -471,6 +471,7 @@ body {
   .catOptions li:hover {
     background-color: rgba(0, 0, 255, 0.850);
     color: white;
+    font-weight: bolder;
   }
   
   
@@ -479,11 +480,15 @@ body {
   .cardimg-tag {
     position: relative;
     margin: 10px;
+    height:350px;
+    width:400px;
+    position:relative;
+    overflow: hidden;
     
   }
   
   
-  .catCards img {
+  .catCards .cardimg-tag .product-image{
   
     height:300px;
     width: 100%;
@@ -503,14 +508,10 @@ body {
     width: 55%;
     font-size: 1rem;
     font-weight: bolder;
-    display:none;
+    
    
   }
-.cardimg-tag:hover .cardlink{
-    display:block;
-    transition-delay:3s;
-   
-  }
+
 
   
   .cardlink a {
@@ -538,16 +539,18 @@ body {
   
   .pimage {
     object-fit:cover;
-    height: 280px;
+    height: 350px;
     width:230px;
     padding: 0 auto;
   
   }
   .pimages{
     object-fit:cover;
-    height: 280px;
+   
+    height:350px;
     width:100%;
     padding: 0 auto;
+    object-position: center;
   
   }
   
@@ -708,6 +711,7 @@ body {
   
   .latestcards {
     display: flex;
+    width:400px;
     flex-direction: column;
     justify-content: center;
    
@@ -737,13 +741,14 @@ body {
   }
   .views {
     display: flex;
-    background-color: aliceblue;
+    opacity: 0.9;
     justify-content: center;
     position: absolute;
-    bottom: 18px;
+    bottom: 20px;
     left: 0;
     width: 100%;
-    opacity: 0.86;
+    background-color: rgb(161, 152, 152);
+
   }
   
   .views p {
@@ -785,8 +790,9 @@ body {
     top: 2%;
     left: 2%;
     height: 7%;
-    width: 10%;
+    width:40px;
     border-radius: 5px;
+    padding-top: 5px;
   }
   
   .datetags p {
@@ -1180,7 +1186,8 @@ body {
     color:black;
     font-weight:bolder;
   }
-  .catOptions .catoption1:hover:after{
+
+  #triangle{
     content: "";
     width: 6px;
     height: 20px;
@@ -1188,50 +1195,33 @@ body {
     border: 15px solid transparent;
     border-top-color: rgb(19, 78, 189);
     position: absolute;
-    top:60px;
-  
-    margin: 0 auto;
-    left:452px
-  }
-  .catOptions .catoption2:hover:after{
-    content: "";
-    width: 6px;
-    height: 20px;
-    display: inline-block;
-    border: 15px solid transparent;
-    border-top-color: rgb(19, 78, 189);
-    position: absolute;
-    top:60px;
-  
-    margin: 0 auto;
-    left:582px
-  }
-  .catOptions .catoption3:hover:after{
-    content: "";
-    width: 6px;
-    height: 20px;
-    display: inline-block;
-    border: 15px solid transparent;
-    border-top-color: rgb(19, 78, 189);
-    position: absolute;
-    top:60px;
-  
-    margin: 0 auto;
-    left:702px
-  }
-  .catOptions .catoption4:hover:after{
-    content: "";
-    width: 6px;
-    height: 20px;
-    display: inline-block;
-    border: 15px solid transparent;
-    border-top-color: rgb(19, 78, 189);
-    position: absolute;
-    top:60px;
-    left:792px;
-  
-    margin: 0 auto;
+    margin-top: 45px;
+ 
    
+   
+  
+
+  }
+  .catOptions .catoption1{
+    background-color:rgb(19,78,189);
+    color:white;
+    font-weight: bolder;
+  }
+  .catOptions .catoption2:hover{
+   background-color:rgb(19,78,189);
+    color:white;
+    font-weight: bolder;
+  }
+  .catOptions .catoption3:hover{
+    background-color:rgb(19,78,189);
+    color:white;
+    font-weight: bolder;
+   
+  }
+  .catOptions .catoption4:hover{
+    background-color:rgb(19,78,189);
+    color:white;
+    font-weight: bolder;
   }
   .main-container{
     display:none;
@@ -1640,6 +1630,10 @@ body {
   .wrapps .wrapper .main-container .left-div .slideshow-container{
   height:405px;
 
+  
+  }
+  .wrapper .categories .latest .latestcards .latestcardsimg{
+    width:310px;
   }
   .wrapps .wrapper .main-container .left-div .slideshow-container .mySlides .text-cont{
     padding-top:90px;
@@ -1660,7 +1654,7 @@ body {
   }
 
 }
-@media screen and (max-width:1022px){
+@media screen and (max-width:1058px){
   .wrapper{
  
      max-width:850px;
@@ -1680,8 +1674,12 @@ body {
    .wrapper .navbaroptions .navoptions .navoptions-list li  #multilevel {
     display:none;
    }
+   .wrapper .categories .latest .latestcards .latestcardsimg{
+    width:260px;
+   }
    
  }
+ 
  @media screen and (max-width:910px){
   .wrapper{
  
@@ -1729,7 +1727,22 @@ body {
   
 
 }
-
+@media screen and (max-width:920px){
+  .wrapper .categories .latest .latestcards .latestcardsimg{
+    width:320px;
+  }
+}
+@media screen and (max-width:580px){
+  .wrapper .categories .latest .latestcard .latestcardimg{ 
+    width:600px;
+    padding: 10px;
+  }
+}
+@media screen and (max-width:689px){
+  .wrapper .categories .latest .latestcards .latestcardsimg{
+    width:300px;
+  }
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -1821,4 +1834,53 @@ body {
 }
 .brandname img{
   filter:grayscale(0%);
+}
+
+
+.wrapper .categories .cardimg-tag:hover .product-image {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+.wrapper .categories .catCards .cardimg-tag:hover  {
+  height:350px;
+}
+.datepart:before{
+  width:60px;
+  height:30px;
+  position: absolute;
+  background-color: rgba(5, 5, 126, 0.849);
+  content: "2 Aug";
+  text-align: center;
+  left:30px;
+  top:10px;
+  color:white;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.latestcardsimg{
+  height: 400px;
+  width:400px;
+  overflow: hidden;
+}
+
+.wrapper .categories .latest .latestcards:hover img{
+  transform: scale(1.1); /* Zoom effect on hover */
+  height: 400px;
+  overflow: hidden;
+}
+.wrapper .categories .catCards .cardimg-tag:hover.latestcardsimg  {
+  height:400px;
+  overflow: hidden;
+}
+
+.wrapper .categories .latest .latestcards:hover .views{
+bottom:0;
+}
+.wrapper .categories .latest .latestcards:hover .latestcards{
+background-color: rgb(202, 193, 193);
+border:2px solid black;
+  }
+.latestcards{
+  text-align: center;
+  padding: 10px;
 }
