@@ -68,8 +68,8 @@ body {
     padding: 0;
     margin: 0;
   }
-  .header{
-    height:40px;
+  header{
+    height:20px;
    
   }
   header{
@@ -117,7 +117,7 @@ body {
   }
   
   .menubar li a {
-    font-size: 16px;
+    font-size: 13px;
     color: rgb(105, 105, 105);
    
   }
@@ -446,7 +446,7 @@ body {
 }
 .anchor-links ul li {
   display:block;
-  line-height: 45px;
+  line-height: 42px;
   font-weight: bolder;
   font-size: 22px;
 }
@@ -903,7 +903,7 @@ body {
     opacity: 0.9;
     justify-content: center;
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     left: 0;
     width: 100%;
     background-color: rgb(161, 152, 152);
@@ -2062,35 +2062,33 @@ body {
   height: 400px;
   width:400px;
   overflow: hidden;
-}
-
-.wrapper .categories .latest .latestcards:hover img{
+} .wrapper .categories .latest .latestcards:hover img{
   transform: scale(1.1); /* Zoom effect on hover */
-  height: 400px;
+  /* height: 400px; */
   overflow: hidden;
 }
-.wrapper .categories .catCards .cardimg-tag:hover.latestcardsimg  {
+ .wrapper .categories .catCards .cardimg-tag:hover.latestcardsimg  {
   height:400px;
   overflow: hidden;
 }
 .wrapper .categories .catCards .cardimg-tag:hover .hovered-image{
   height:400px;
   overflow: hidden;
-}
+} 
 .outer-fashion{
   width:100%;
-  height:550px;
+  height:560px;
   display:flex;
 }
 .fashion-heading{
   width:30%;
-  height:100%;
+  height:97%;
 
   padding: 5px 20px ;
 }
 .new-fashion-heading{
   width:70%;
-  height:100%;
+  height:99%;
   
 }
 .wrapper .categories .latest .latestcards:hover .views{
